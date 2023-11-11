@@ -1,0 +1,11 @@
+{% if lista_questoes_recentes %}
+    <ul>
+        {% for questao in lista_questoes_recentes %}
+            <li>
+                <a href="/enquetes/{{ questao.id }}">{{ questao.texto_questao }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma enquete econtrada</p>
+{% endif %}
